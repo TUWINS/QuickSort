@@ -10,9 +10,9 @@ public class QuickSort {
     public static int quickSort(int[] arr, int low, int high) {
         int comparations = 0; /*inicializa el contador de comparaciones en 0;  */
         if (low < high) {
-            int[] partitionResult = partition(arr, low, high);
-            int pi = partitionResult[0];
-            comparations += partitionResult[1];
+            int[] result = partition(arr, low, high);
+            int pi = result[0];
+            comparations += result[1];
 
             comparations += quickSort(arr, low, pi - 1);
             comparations += quickSort(arr, pi + 1, high);
@@ -36,7 +36,7 @@ public class QuickSort {
                 arr[j] = temp;
             }
         }
-/*Intercambia */
+/*Intercambia (arr[high]) con el elemento en i+1 para colocarlo en su posición final*/
         int temp = arr[i + 1];
         arr[i + 1] = arr[high];
         arr[high] = temp;
@@ -54,24 +54,24 @@ public class QuickSort {
             int[] arr = new int[parts.length]; /*Crea un arreglo de enteros de un tamaño adecuado para el  */
             for (int i = 0; i < parts.length; i++) {
                 arr[i] = Integer.parseInt(parts[i]); /*Convierte cada parte en un entero y lo almacena en el arreglo */
-                if(arr[i]<0){
+                if(arr[i]<0)
                     throw new IllegalArgumentException("El arreglo solo debe contener números enteros positivos."); /*  Validación única: lanza error si hay números negativos */
             }
-        }
+        
             br.close();
                 
                 int comparations = quickSort(arr, 0, arr.length - 1); /*Llama al método quickSort y obtiene el número de comparaciones */
                 long endTime = System.nanoTime(); /*Se reistra el tiempo de fin */
 
                 /*Escribe el arreglo  ordenado en el archivo de salida */
-             BufferedWriter bw = new BufferedWriter(new FileWriter("output_quick.txt"));
+             BufferedWriter bw = new BufferedWriter(new FileWriter("salida_quick.txt"));
                 for (int num : arr) {
                     bw.write(num + " ");/*  Escribe cada  número seguido de un espacio */
                 
                 }
                 bw.close();
                 /*  // Escribe un log único con timestamp, comparaciones y tiempo de ejecución  */
-                BufferedWriter log = new BufferedWriter(new java.io.FileWriter("log_quick.txt", true));
+                BufferedWriter log = new BufferedWriter(new FileWriter("log_quick.txt", true));
                 log.write("Timestamp: " + LocalDateTime.now() + ", Comparaciones: " + comparations + ", Tiempo de ejecución (ns): " + (endTime - startTime) + "\n");
                 log.close();/*Se cierra el log */
                 System.out.println("Ordenamiento completado. Revisa 'salida.txt' para el arreglo ordenado y 'log_quick.txt' para el log.");
