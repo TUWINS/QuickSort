@@ -1,6 +1,6 @@
-#  QuickSort con Contador de Comparaciones y Validación en Java
+#  QuickSort
 
-Este programa implementa el algoritmo **Quick Sort** para ordenar un arreglo de enteros. Además, cuenta **comparaciones únicas**, mide el **tiempo de ejecución**, valida que los números sean positivos y registra un **log con timestamp**.  
+Este programa implementa el algoritmo **Quick Sort** para ordenar un arreglo de enteros. 
 
 Los datos se leen desde `entrada_quick.txt` y los resultados se escriben en `salida_quick.txt` y `log_quick.txt`.
 
