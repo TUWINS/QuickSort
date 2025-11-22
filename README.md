@@ -28,7 +28,7 @@ Resultado: [1,1,2,3,6,8,10] → Total comparaciones: 10
 
 ...
 Cómo Ejecutar
-Crea input_quick.txt con una línea de números juntos (ejemplo, 36810121).
+Crea input_quick.txt con una línea de números (ejemplo, 3 6 8 1 0 1 2 1).
 Compila: javac QuickSort.java.
 Ejecuta: java QuickSort.
 Salida: Arreglo ordenado en salida_quick.txt, log en log_quick.txt.
