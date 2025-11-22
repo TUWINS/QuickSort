@@ -79,7 +79,7 @@ Entrada (`entrada_quick.txt`):
    - Comparaciones: 4  
 
 **Resultado final**: `[1,1,2,3,6,8,10]`  
-**Total comparaciones**: 10
+**Total comparaciones**: 16
 
 ---
 
