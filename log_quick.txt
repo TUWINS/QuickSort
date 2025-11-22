@@ -1,1 +1,2 @@
-Timestamp: 2025-11-20T00:46:43.506066300, Comparaciones: 13, Tiempo de ejecución (ns): 1768800
+Timestamp: 2025-11-21T19:13:18.663719100, Comparaciones: 13, Tiempo de ejecución (ns): 2540600
+Timestamp: 2025-11-21T19:14:57.460126600, Comparaciones: 16, Tiempo de ejecución (ns): 1674300
