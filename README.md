@@ -1,34 +1,89 @@
-1. QuickSort.java
-Descripción: Ordena un arreglo de enteros usando Quick Sort, cuenta comparaciones únicas, mide tiempo, y valida números positivos. Lee desde entrada.txt y escribe en salida_quick.txt y log_quick.txt.
+#  QuickSort con Contador de Comparaciones y Validación en Java
 
-Pasos para Crear el Algoritmo
-Definir la Estructura Básica:
+Este programa implementa el algoritmo **Quick Sort** para ordenar un arreglo de enteros. Además, cuenta **comparaciones únicas**, mide el **tiempo de ejecución**, valida que los números sean positivos y registra un **log con timestamp**.  
 
-Crea la clase QuickSort con métodos quickSort (recursivo) y partition (auxiliar).
-quickSort divide el arreglo recursivamente y acumula comparaciones.
-partition elige el último elemento como pivote, particiona el arreglo, y cuenta comparaciones.
-Agregar Elementos Únicos:
+Los datos se leen desde `entrada_quick.txt` y los resultados se escriben en `salida_quick.txt` y `log_quick.txt`.
 
-Contador de comparaciones en partition para medir eficiencia.
-Validación en main: lanza error si hay números negativos.
-Medición de tiempo con System.nanoTime() y log con timestamp.
-Manejo de Archivos:
+---
 
-Usa BufferedReader para leer entrada_quick.txt (línea con números separados por espacios).
-Usa BufferedWriter para escribir arreglo ordenado en salida_quick.txt y log en log_quick.txt.
-Manejo de Excepciones:
+## Características Principales
 
-Captura excepciones con try-catch para errores de archivo o validación.
-Prueba de Escritorio (Entrada: 3 6 8 10 1 2 1 en entrada_quick.txt):
+- Ordena números enteros usando **Quick Sort recursivo**  
+- Cuenta **comparaciones únicas** para medir eficiencia  
+- Valida que todos los números sean positivos  
+- Mide tiempo de ejecución con `System.nanoTime()`  
+- Genera log con **timestamp**  
+- Maneja errores de archivos y validación mediante `try-catch`  
 
-Arreglo inicial: [3,6,8,10,1,2,1]
-Partición con pivote 1: Menores [1], mayores [3,6,8,10,2] → Comparaciones: 6
-Recursión en mayores: Pivote 2 → Menores [3], mayores [6,8,10] → Comparaciones: 4
-Resultado: [1,1,2,3,6,8,10] → Total comparaciones: 10
+---
 
-...
-Cómo Ejecutar
-Crea input_quick.txt con una línea de números (ejemplo, 3 6 8 1 0 1 2 1).
-Compila: javac QuickSort.java.
-Ejecuta: java QuickSort.
-Salida: Arreglo ordenado en salida_quick.txt, log en log_quick.txt.
+##  Cómo funciona el algoritmo
+
+1. **Clase `QuickSort`**  
+   - `quickSort(int[] arr, int low, int high)`: ordena recursivamente el arreglo y acumula comparaciones  
+   - `partition(int[] arr, int low, int high)`: elige el último elemento como pivote, particiona el arreglo y cuenta comparaciones
+
+2. **Validación de entrada**:  
+   - Si hay algún número negativo en el arreglo, el programa lanza un error y termina la ejecución.
+
+3. **Medición de tiempo**:  
+   - Se mide usando `System.nanoTime()` antes y después de ordenar el arreglo.  
+
+4. **Registro de log**:  
+   - Fecha y hora junto con el total de comparaciones realizadas.  
+
+---
+
+##  Archivos utilizados
+
+### ✔ Archivo de entrada: `entrada_quick.txt`
+- Una línea con números enteros separados por espacios.  
+- Ejemplo:
+3 6 8 10 1 2 1
+
+
+
+###  Archivo de salida: `salida_quick.txt`
+- Contiene el **arreglo ordenado**.  
+- Ejemplo:
+1 1 2 3 6 8 10
+
+
+### Archivo de log: `log_quick.txt`
+- Contiene **timestamp** y número de comparaciones realizadas.  
+- Ejemplo:
+2025-11-21T19:25 - Total comparaciones: 16
+
+
+
+---
+
+##  Ejemplo de ejecución
+
+Entrada (`entrada_quick.txt`):
+3 6 8 10 1 2 1
+
+
+
+### Paso a paso:
+
+1. **Arreglo inicial**: `[3,6,8,10,1,2,1]`  
+2. **Partición con pivote `1`**:  
+   - Menores: `[1]`  
+   - Mayores: `[3,6,8,10,2]`  
+   - Comparaciones: 6  
+
+3. **Recursión en mayores, pivote `2`**:  
+   - Menores: `[3]`  
+   - Mayores: `[6,8,10]`  
+   - Comparaciones: 4  
+
+**Resultado final**: `[1,1,2,3,6,8,10]`  
+**Total comparaciones**: 10
+
+---
+
+## ▶️ Cómo ejecutar
+
+1. Crear `entrada_quick.txt` con números separados por espacios.  
+2. Compilar: QuickSort.java
