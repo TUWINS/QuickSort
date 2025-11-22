@@ -1,5 +1,5 @@
 1. QuickSort.java
-Descripción: Ordena un arreglo de enteros usando Quick Sort, cuenta comparaciones únicas, mide tiempo, y valida números positivos. Lee desde entrada_quick.txt y escribe en salida_quick.txt y log_quick.txt.
+Descripción: Ordena un arreglo de enteros usando Quick Sort, cuenta comparaciones únicas, mide tiempo, y valida números positivos. Lee desde entrada.txt y escribe en salida_quick.txt y log_quick.txt.
 
 Pasos para Crear el Algoritmo
 Definir la Estructura Básica:
